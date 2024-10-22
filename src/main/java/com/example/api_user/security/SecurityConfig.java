@@ -60,8 +60,6 @@ public class SecurityConfig {
                     .requestMatchers(HttpMethod.POST, "/api/users").permitAll()
                     .anyRequest().authenticated()
                 )
-                .oauth2Login(withDefaults())
-                .authenticationProvider()
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
