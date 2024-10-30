@@ -12,6 +12,6 @@ services:
     expose:
       - '3307'
     volumes:
-      - my-db:/var/lib/mysql
+      - api-user-db:/var/lib/apiuserdb
 volumes:
-  my-db:
+  api-user-db:
